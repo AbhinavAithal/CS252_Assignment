@@ -12,3 +12,5 @@ Proc file system is a virtual/pseudo file system created on the fly when the sys
 This project involves mainly two tasks:<br />
 1)To design a kernel module that creates a /proc file named /proc/jiffies that reports the current value of jiffies when the /proc/jiffies file is read<br />
 2)To design a kernel module that creates a proc file named /proc/seconds that reports the number of elapsed seconds since the kernel module was loaded<br />
+<br />
+This repository holds the code to both tasks alongwith a Makefile that is needed to compile the codes on a linux system. Insipiration for the code was taken from Kiran Kankipati's Youtube channel - "The Linux Channel" : https://youtu.be/P-9-xC7aCeA
