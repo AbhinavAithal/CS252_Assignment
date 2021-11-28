@@ -11,7 +11,6 @@ Proc file system is a virtual/pseudo file system created on the fly when the sys
 <br />
 ### This project involves mainly two tasks:
 1. To design a kernel module that creates a /proc file named /proc/jiffies that reports the current value of jiffies when the /proc/jiffies file is read
-<br />
 2. To design a kernel module that creates a proc file named /proc/seconds that reports the number of elapsed seconds since the kernel module was loaded
 <br />
 <br />
