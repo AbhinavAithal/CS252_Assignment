@@ -7,3 +7,8 @@ Creating kernel modules enables the user to establish direct communication/inter
 <br />
 <br />
 Proc file system is a virtual/pseudo file system created on the fly when the system boots and exists only in the kernel memory. It is used primarily for querying various kernel and per-process statistics and is regarded as the control and information center of the kernel. It basically provides a communication medium between the user space and kernel space. The proc filesystem is dissolved when the system shuts down. 
+<br />
+<br />
+This project involves mainly two tasks:<br />
+1)To design a kernel module that creates a /proc file named /proc/jiffies that reports the current value of jiffies when the /proc/jiffies file is read<br />
+2)To design a kernel module that creates a proc file named /proc/seconds that reports the number of elapsed seconds since the kernel module was loaded<br />
