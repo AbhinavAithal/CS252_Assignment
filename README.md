@@ -6,4 +6,4 @@ This project has been developed on Ubuntu 16.04 LTS run on a Virtual Machine(VMw
 Creating kernel modules enables the user to establish direct communication/interaction with the kernel and invoke kernel functions.<br />
 <br />
 <br />
-Proc file system is a virtual/pseudo file system created on the fly when the system boots and exists only in the kernel memory.It is used primarily for querying various kernel and per-process statistics and is regarded as the control and information center of the kernel. It basically provides a communication medium between the user space and kernel space. The proc filesystem is dissolved when the system shuts down. 
+Proc file system is a virtual/pseudo file system created on the fly when the system boots and exists only in the kernel memory. It is used primarily for querying various kernel and per-process statistics and is regarded as the control and information center of the kernel. It basically provides a communication medium between the user space and kernel space. The proc filesystem is dissolved when the system shuts down. 
