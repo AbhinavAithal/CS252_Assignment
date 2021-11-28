@@ -19,7 +19,7 @@ static void proc_exit(void);
 struct proc_dir_entry *my_proc;
 unsigned long curr_time, initial_time, elapsed_time;
 
-/* This function is called each time /proc/seconds is read */
+/* This function is called every time /proc/seconds is read */
 ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, loff_t *pos)
 {
   int result = 0;
@@ -31,9 +31,8 @@ ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, loff_t 
 	return 0;
   }
   completed = 1;
- 
-  curr_time = jiffies/HZ;
-  elapsed_time = curr_time - initial_time;
+  curr_time = jiffies/HZ; //obtaining the current time
+  elapsed_time = curr_time - initial_time; //calculating elapsed time until now
   result = sprintf(buffer, "Kernel Module Running time: %lu\n", elapsed_time);
 
   /* copies kernel space buffer to user space usr buf */
@@ -42,19 +41,16 @@ ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, loff_t 
 }
 
 /* File operation on proc */
-
 static struct file_operations proc_ops =
 {
   .owner=THIS_MODULE,
   .read=proc_read,
 };
 
-
 /*This function is called when the module is loaded. */
-
 int proc_init(void)
 {
-  initial_time = jiffies/HZ;
+  initial_time = jiffies/HZ; //obtaining the time when module is initiated
   my_proc =  proc_create(PROC_NAME, 0666, NULL, &proc_ops); //creates the /proc/seconds entry
   return 0;
 }
